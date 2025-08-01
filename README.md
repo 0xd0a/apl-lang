@@ -59,6 +59,38 @@ agent CustomerSupportAgent {
 }
 ```
 
+## Generate APL Code with LLMs
+
+**Don't want to write code manually?** APL might seem technical, but you can leverage the power of LLMs to generate APL code without writing a single line!
+
+### How to Generate APL Code:
+
+1. **Upload or reference** the [specification.md](specification.md) file to your preferred LLM (ChatGPT, Claude, Gemini, Cursor, etc.)
+
+2. **Ask in natural language** what you want your agent to do:
+
+```
+"Create an APL agent that handles customer support tickets, 
+extracts customer information, routes to appropriate departments, 
+and sends email notifications when issues are resolved."
+```
+
+3. **The LLM will generate** complete APL code based on the specification and your requirements.
+
+### Example Prompt:
+```
+I need an APL agent for a restaurant reservation system that:
+- Takes reservation requests via chat
+- Checks table availability 
+- Confirms bookings via SMS
+- Handles cancellations and modifications
+- Integrates with our booking database
+
+Please write the complete APL code following the specification.
+```
+
+The LLM will generate a fully functional APL agent with proper state machines, decision logic, and system integrations!
+
 ## Examples
 
 See the [`examples/`](examples/) directory for complete APL programs including:
@@ -67,6 +99,35 @@ See the [`examples/`](examples/) directory for complete APL programs including:
 - Form handling and data collection workflows  
 - Multi-module agent compositions
 - Error handling and recovery patterns
+
+## Do LLMs/Agents Understand This Language?
+
+**Yes!** While support is not "native," LLMs have a great degree of understanding of APL since it is built with structure and LLM capabilities in mind.
+
+### LLM Compatibility
+
+LLMs can effectively:
+- **Parse APL syntax** and understand agent structure
+- **Execute decision logic** using `@decide` blocks  
+- **Interpret state machines** and behavior flows
+- **Generate APL code** when given specifications
+
+### How to Use APL with LLMs
+
+To have an LLM interpret and execute APL code, prepend your prompt with:
+
+```
+"Here's code written in Agent Prompting Language (APL). 
+You need to execute this code using the user's text as input:"
+
+[Your APL code here]
+
+User input: "I have a billing question"
+```
+
+### Future Development
+
+We plan to fine-tune specialized LLMs on APL code corpus, but current general-purpose LLMs already demonstrate excellent APL comprehension with proper instruction.
 
 ## Contributing
 
